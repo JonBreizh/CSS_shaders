@@ -4,6 +4,7 @@
 https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html
 http://www.adobe.com/devnet/html5/articles/css-shaders.html
 http://adobe.github.com/web-platform/samples/css-customfilters/
+http://updates.html5rocks.com/2011/12/CSS-Filter-Effects-Landing-in-WebKit
 */
 
 
@@ -28,6 +29,8 @@ nav {
 	-o-transition : 0.3s all ease;
 	transition : 0.3s all ease;*/
 }
+
+.holder img {background:black;}
 
 img.shaded_image {	
 	width:350px;
@@ -60,11 +63,15 @@ img.shaded_image {
 
 /* Shadow */
 .drop_shadow {
-    -webkit-filter: drop-shadow(5px, 2px, 1px);
+    -webkit-filter: drop-shadow(60px 40px 2px rgba(0,21,53,0.8));
 }
 
 .drop_shadow:hover {
-    -webkit-filter: drop-shadow(0px, 0px, 0px);
+    -webkit-filter: drop-shadow(0px 0px 0px black);
+}
+
+.drop_shadow img {
+	background:none;
 }
 
 /* Saturate */

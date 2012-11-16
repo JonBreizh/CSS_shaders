@@ -12,7 +12,7 @@
 			<select id="filters">
   				<option value="greyscale">Greyscale</option>
   				<option value="blur">Blur</option>
-  				<option value="shadow">Shadow</option>
+  				<option value="drop_shadow">Shadow</option>
   				<option value="saturate">Saturate</option>
   				<option value="invert">Invert</option>
   				<option value="contrast">Contrast</option>
@@ -22,7 +22,7 @@
 			</select> 
 		</nav>
 		<div class="holder greyscale">
-			<img class="shaded_image" src="img/OBAMA.jpg">
+			<img class="shaded_image" src="img/OBAMA.png">
 			<p>Some text right here</p>
 		</div>
 </div>
@@ -41,10 +41,29 @@
 			var img = $('.shaded_image');
 			var baseClass = "holder";
 
+
 			filters.change(function(){
 				var newClass = $(this).find('option:selected').val();
 				holder.attr('class',''+baseClass+' '+newClass);
+				autoChange();
 			});
+
+			function effectChange(){
+				var newClass = filters.find('option:selected').val();
+				console.log(newClass);
+				holder.attr('class',''+baseClass+' '+newClass);
+			}
+
+			function autoChange(){
+				var currentEffect = filters.find('option:selected');
+				var nextEffect = filters.find('option:selected').next();
+
+				filters.find('option:selected').attr('option','');
+				nextEffect.attr('option','selected');
+
+					effectChange();
+
+			}
 
 		});
 
