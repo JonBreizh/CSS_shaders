@@ -1,0 +1,119 @@
+/* style.css */
+
+/* Documentation
+https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html
+http://www.adobe.com/devnet/html5/articles/css-shaders.html
+http://adobe.github.com/web-platform/samples/css-customfilters/
+*/
+
+
+/*Transition*/
+div[role="main"]{
+
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+nav {
+	float:left;
+	margin-right:50px;
+}
+.holder {
+	display:inline-block;
+	float:left;
+	/*-webkit-transition : -webkit-filter linear 0.5s;
+	-moz-transition : 0.3s all ease;
+	-ms-transition : 0.3s all ease;
+	-o-transition : 0.3s all ease;
+	transition : 0.3s all ease;*/
+}
+
+img.shaded_image {	
+	width:350px;
+	height:473px;
+	/*-webkit-transition : 0.3s all ease;
+	-moz-transition : 0.3s all ease;
+	-ms-transition : 0.3s all ease;
+	-o-transition : 0.3s all ease;
+	transition : 0.3s all ease;*/
+}
+
+
+/*Greyscale*/
+.greyscale {
+    -webkit-filter: grayscale(1);
+}
+
+.greyscale:hover {
+    -webkit-filter: grayscale(0);
+}
+
+/* Blur */
+.blur {
+    -webkit-filter: blur(5px);
+}
+
+.blur:hover {
+    -webkit-filter: blur(0px);
+}
+
+/* Shadow */
+.drop_shadow {
+    -webkit-filter: drop-shadow(5px, 2px, 1px);
+}
+
+.drop_shadow:hover {
+    -webkit-filter: drop-shadow(0px, 0px, 0px);
+}
+
+/* Saturate */
+.saturate {  
+      -webkit-filter: saturate(1000%);  
+}  
+.saturate:hover {  
+      -webkit-filter: saturate(100%);  
+}  
+
+/* Invert */
+.invert {  
+      -webkit-filter: invert(100%);  
+}  
+.invert:hover {  
+      -webkit-filter: invert(0%);  
+} 
+
+/* Contrast */
+.contrast {  
+      -webkit-filter: contrast(2000%);  
+}  
+.contrast:hover {  
+      -webkit-filter: contrast(100%);  
+}  
+
+/* Brightness */
+.brightness {  
+      -webkit-filter: brightness(90%);  
+}  
+.brightness:hover {  
+      -webkit-filter: brightness(0%);  
+}  
+
+/* Sepia */
+.sepia {  
+      -webkit-filter: sepia(100%);  
+}  
+.sepia:hover {  
+      -webkit-filter: sepia(0%);  
+}
+
+/* Hue Rotate */
+.huerotate {  
+   -webkit-filter: hue-rotate(50deg);  
+}  
+.huerotate:hover {  
+   -webkit-filter: hue-rotate(0deg);  
+}  
+
+
+
