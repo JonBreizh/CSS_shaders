@@ -8,19 +8,25 @@ http://updates.html5rocks.com/2011/12/CSS-Filter-Effects-Landing-in-WebKit
 */
 
 div[role="main"]{
-	width:500px;
-	margin-left:auto;
-	margin-right:auto;
+  width:500px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 nav {
-	float:left;
-	margin-right:50px;
+  float:left;
+  margin-right:50px;
+}
+
+#filters {
+  border:none;
+  font-size:20px;
+  font-family: 'Poiret One', cursive;
 }
 
 .holder {
-	display:inline-block;
-	float:left;
+  display:inline-block;
+  float:left;
   /* Gives a bug where the div grows twice its width, without transition whatsoever*/
   /*
   -webkit-transition : -webkit-filter 0.5s ease-in;
@@ -35,9 +41,9 @@ nav {
   background:black;
 }
 
-img.shaded_image {	
-	width:350px;
-	height:473px;
+img.shaded_image {  
+  width:350px;
+  height:473px;
 }
 
 /* Below the CSS filters properties */
@@ -93,7 +99,7 @@ img.shaded_image {
 }
 
 .drop_shadow img {
-	background:none;
+  background:none;
 }
 
 /* Saturate */
@@ -191,3 +197,20 @@ img.shaded_image {
    -o-filter: hue-rotate(0deg);  
    filter: hue-rotate(0deg);  
 }  
+
+
+  .broken_square {
+    background:black;width:350px;height:473px;margin-left:auto;margin-right:auto;margin-top:10%;
+    -webkit-transition: -webkit-filter linear 1s;
+  }
+
+    .shader {
+  /*-webkit-filter: custom(url(shaders/detached_tiles.vs) mix(url(shaders/detached_tiles.fs) normal source-atop), 5 5 border-box detached, amount 150.0, t 1.0, transform rotateX(45deg) rotateZ(-20deg)) grayscale(1);*/
+  -webkit-filter: grayscale(1);
+    }
+
+    .shader:hover{
+  /*-webkit-filter: custom(url(shaders/detached_tiles.vs) mix(url(shaders/detached_tiles.fs) normal source-atop), 5 5 border-box detached, amount 75.0, t 0.0, transform rotateX(0deg)) grayscale(0);;
+  -webkit-filter-margin: 0%;*/
+  -webkit-filter: grayscale(0);
+    }
